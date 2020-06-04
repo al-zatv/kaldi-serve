@@ -4,14 +4,14 @@ set -eu -o pipefail ; shopt -s failglob
 
 
 # ============= to run client
-# https://linuxize.com/post/how-to-install-ffmpeg-on-centos-7/
 yum install python3-devel  portaudio-devel 
 pip3 install docopt pydub grpcio protobuf pyaudio
 
 cd kaldi-serve/python/scripts
 ln -s ../kaldi-serve kaldi-serve
 
-echo "probably you need russian locale for centos7. please read comments in script"
+echo "1) you need to install ffmpeg. please read https://linuxize.com/post/how-to-install-ffmpeg-on-centos-7/ for directions"
+echo "2) probably you need russian locale for centos7. please read comments in script"
 # !!! русифицировать консоль centos7:
 # http://dedicatesupport.com/content/nastroika-lokali-v-konsoli-v-centos
 # не забыть chmod a+x /etc/чототам/i18n
